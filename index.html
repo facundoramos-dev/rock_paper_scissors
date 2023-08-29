@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Piedra Papel y Tijeras</title>
+  </head>
+  <body>
+    <main>
+      <h1>Piedra Papel o Tijeras</h1>
+      <div class="main__container">
+        <div id="containerName" class="wrapper__container">
+          <p class="text__unique">Ingrese su nombre:</p>
+          <input type="text" name="nick" id="nick" />
+          <p id="errorNick" class="error"></p>
+          <button type="button" id="play">Jugar</button>
+        </div>
+        <div id="containerGame" class="wrapper__container pointerNone">
+          <div class="container__pointers">
+            <h2>Puntajes</h2>
+            <div class="current__pointers">
+              <p id="nickUserPlay">Jugador: <span id="userPoints">0</span></p>
+              <p>CPU: <span id="cpuPoints">0</span></p>
+            </div>
+          </div>
+          <div class="hands__selection">
+            <h2 class="title__selection">Selecciona tu mano</h2>
+            <div class="container__fluid user__selection">
+              <div id="rock" data-hand="0">
+                <img src="assets/img/rock-min.png" alt="rock" />
+              </div>
+              <div id="paper" data-hand="1">
+                <img src="assets/img/paper-min.png" alt="paper" />
+              </div>
+              <div id="scissors" data-hand="2">
+                <img src="assets/img/scissors-min.png" alt="scissors" />
+              </div>
+            </div>
+          </div>
+          <div class="hands__selecition">
+            <h2 class="title__selection">Mano del PC</h2>
+            <div class="container__fluid">
+              <div>
+                <img src="assets/img/scissors-min.png" alt="scissors" />
+              </div>
+              <div><img src="assets/img/rock-min.png" alt="rock" /></div>
+              <div><img src="assets/img/paper-min.png" alt="paper" /></div>
+            </div>
+          </div>
+        </div>
+        <div id="overlay" class="overlay pointerNone">
+          <div id="containerPopUp" class="wrapper__container pop__up">
+            <p id="textWinner"></p>
+            <button id="continueGame">Continuar</button>
+          </div>
+        </div>
+        <div
+          id="containerMessageEnd"
+          class="wrapper__container message__end"
+        ></div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>
